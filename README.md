@@ -1,11 +1,13 @@
 # cinema-finder-android
 Android app to find nearby cinemas, search movies, and save favorites.
-A Flutter recipe manager that showcases local persistence with sqflite, a favorites flow, a simple Nearby (HTTP JSON) feed, and a map screen using google_maps_flutter + geolocator. It highlights clean widget composition, basic state management, and platform setup for maps.
+CinemaFinder is a native Android project that locates nearby cinemas and lets you search titles and save favorites. The code is organized with MVVM, ViewModel/LiveData (or Flow), Retrofit for REST, and Room for offline caching. The goal is to demonstrate clean architecture, testable data layers, and modern Android patterns.
 
-SQLite schema & DAO: create/read/update for recipes + ingredients.
+Highlights to mention under About:
 
-Favorites & details: list → detail → mark favorite → view favorites.
+Location search: device location → nearby cinemas (FusedLocationProvider).
 
-Maps & location: current location pin; Android API key via manifest.
+Movie lookup: Retrofit against TMDb/OMDb (API key kept out of VCS).
 
-HTTP demo: Nearby screen consumes a public JSON endpoint.
+Persistence: Room favorites + simple offline cache.
+
+Architecture: MVVM, Repository pattern, Kotlin coroutines, Material 3 UI.
